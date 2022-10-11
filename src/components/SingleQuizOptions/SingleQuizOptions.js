@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const SingleQuizOptions = ({ option, quiz }) => {
-  console.log(option)
+  console.log(option);
   const [isActive, setIsActive] = useState(false);
   const handleOnclick = () => {
     if (option === quiz.correctAnswer) {
       setIsActive((current) => !current);
+      toast.success('Wow ! You Got It Right');
+    } else {
+      toast.error('Oho ! Wrong ! Try Again');
     }
   };
   return (

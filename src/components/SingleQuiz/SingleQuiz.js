@@ -2,7 +2,7 @@ import React from 'react';
 import SingleQuizOptions from '../SingleQuizOptions/SingleQuizOptions';
 import { EyeIcon } from '@heroicons/react/24/solid';
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -38,25 +38,9 @@ const SingleQuiz = ({ quiz }) => {
               onClick={notify}
               className="cursor-pointer h-8 w-8 text-blue-700"
             ></EyeIcon>
-            <ToastContainer
-              position="top-center"
-              autoClose={2000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="colored"
-            />
-
-          
           </div>
-         
         </div>
       </div>
-    
     </div>
   );
 };
