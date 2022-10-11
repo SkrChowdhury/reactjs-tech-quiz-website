@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const SingleQuizOptions = ({ option, quiz }) => {
+  console.log(option)
   const [isActive, setIsActive] = useState(false);
   const handleOnclick = () => {
     if (option === quiz.correctAnswer) {

@@ -2,38 +2,35 @@ import { Tooltip } from 'bootstrap';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import {
+  CartesianGrid,
   Legend,
-  RadialBar,
-  RadialBarChart,
+  Line,
+  LineChart,
   ResponsiveContainer,
+  XAxis,
+  YAxis,
 } from 'recharts';
 
 const Statistics = () => {
   const chartinfo = useLoaderData();
   const chart = chartinfo.data;
   return (
-    <ResponsiveContainer height={800}>
-      <RadialBarChart
+    <ResponsiveContainer
+      className="pt-6 "
+      height={600}
+      width="100%"
+    >
+      <LineChart
         data={chart}
-        startAngle={180}
-        endAngle={0}
-        margin={{ top: 20, right: 70, left: 0, bottom: 0 }}
+        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
       >
-        <RadialBar
-          minAngle={10}
-          label={{ fill: '#fff', position: 'left' }}
-          clockWise={true}
-          dataKey="total"
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Legend />
+        <Line type="monotone" dataKey="total" stroke="#8884d8" />
         />
-        <Legend
-          iconSize={20}
-          width={120}
-          height={140}
-          layout="vertical"
-          verticalAlign="top"
-          align="right"
-        />
-      </RadialBarChart>
+      </LineChart>
     </ResponsiveContainer>
   );
 };
