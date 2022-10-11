@@ -13,7 +13,7 @@ const HeaderBlog = () => {
                 </p>
               </div>
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                Our Aim 
+                Our Aim
                 <br />
                 Your{' '}
                 <span className="inline-block text-deep-purple-accent-400">
