@@ -23,9 +23,12 @@ Get topic details by topic id: https://openapi.programming-hero.com/api/quiz/${i
 Example: https://openapi.programming-hero.com/api/quiz/1
 
 
-## Tech Stack
+## Tech Stack:
 
 React JS, TailwindCSS, React-Bootstrap, React-Toastify, ReCharts
+
+## Live Site Link:
+https://tech-quiz-site.netlify.app/
 
 
 
