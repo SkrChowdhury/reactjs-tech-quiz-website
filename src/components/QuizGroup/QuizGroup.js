@@ -1,7 +1,7 @@
 import React from 'react';
 import Quiz from '../Quiz/Quiz';
 
-const QuizGroup = ({topics}) => {
+const QuizGroup = ({ topics }) => {
   return (
     <div>
       <div className="relative w-full h-full">
@@ -37,13 +37,14 @@ const QuizGroup = ({topics}) => {
               for Programmers
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
-              Try ours Quizes to sharpen your knowledge and win awards achieving places among top 50
+              Try ours Quizes to sharpen your knowledge and win awards achieving
+              places among top 50
             </p>
           </div>
-          <div className="grid  gap-10 md:grid-cols-2 lg:grid-cols-4 sm:mx-auto">
-            {
-              topics.data.map(subject=> <Quiz key={subject.id} subject={subject}></Quiz>)
-            }
+          <div className="grid  gap-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 sm:mx-auto">
+            {topics.data.map((subject) => (
+              <Quiz key={subject.id} subject={subject}></Quiz>
+            ))}
           </div>
         </div>
       </div>

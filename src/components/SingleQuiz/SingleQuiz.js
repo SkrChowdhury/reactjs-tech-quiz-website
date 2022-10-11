@@ -1,15 +1,13 @@
 import React from 'react';
 import SingleQuizOptions from '../SingleQuizOptions/SingleQuizOptions';
 import { EyeIcon } from '@heroicons/react/24/solid';
-
 import { toast } from 'react-toastify';
-
 import 'react-toastify/dist/ReactToastify.css';
 
 const SingleQuiz = ({ quiz }) => {
   const options = quiz.options;
   const notify = () =>
-    toast.success(`🦄 ${quiz.correctAnswer}`, {
+    toast.info(`Correct Answer:  ${quiz.correctAnswer}`, {
       position: 'top-center',
       autoClose: 2000,
       hideProgressBar: false,
@@ -23,9 +21,12 @@ const SingleQuiz = ({ quiz }) => {
     <div>
       <div className="  px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-12 lg:py-8 ">
         <div className="  p-4 rounded shadow-xl sm:p-10 bg-slate-50">
-          <p className="text-lg text-start font-semibold">{quiz.question}</p>
+          <p className="text-blue-900 text-lg text-start font-semibold">
+            {quiz.question}
+          </p>
           <div className=" cursor-pointer grid lg:grid-cols-2 md:grid-cols-1">
             {options.map((option) => (
+              
               <SingleQuizOptions
                 key={quiz.id}
                 option={option}

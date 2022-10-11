@@ -7,9 +7,10 @@ const QuizDetails = () => {
 
   const quizes = quizDetails.data.questions;
 
+
   return (
     <div>
-      <h2 className="mt-10 font-extrabold text-deep-purple-accent-400 text-3xl">
+      <h2 className="mt-10 font-extrabold text-deep-purple-accent-400 text-4xl">
         Quiz of {quizDetails.data.name}
       </h2>
       {quizes.map((quiz) => (
