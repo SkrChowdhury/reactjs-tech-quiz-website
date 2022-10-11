@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import QuizDetails from './components/QuizDetails/QuizDetails';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -28,7 +29,6 @@ function App() {
           element: <Blog></Blog>,
         },
         {
-
           path: '/quiz/:id',
           loader: async ({ params }) => {
             return fetch(
@@ -37,6 +37,7 @@ function App() {
           },
           element: <QuizDetails></QuizDetails>,
         },
+        { path: '*', element: <ErrorPage></ErrorPage> },
       ],
     },
   ]);

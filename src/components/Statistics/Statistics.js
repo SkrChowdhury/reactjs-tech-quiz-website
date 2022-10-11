@@ -12,31 +12,29 @@ const Statistics = () => {
   const chartinfo = useLoaderData();
   const chart = chartinfo.data;
   return (
-    <div>
-      <ResponsiveContainer height={600}>
-        <RadialBarChart
-          data={chart}
-          startAngle={180}
-          endAngle={0}
-          margin={{ top: 20, right: 70, left: 0, bottom: 0 }}
-        >
-          <RadialBar
-            minAngle={10}
-            label={{ fill: '#fff', position: 'left' }}
-            clockWise={true}
-            dataKey="total"
-          />
-          <Legend
-            iconSize={20}
-            width={120}
-            height={140}
-            layout="vertical"
-            verticalAlign="top"
-            align="right"
-          />
-        </RadialBarChart>
-      </ResponsiveContainer>
-    </div>
+    <ResponsiveContainer height={800}>
+      <RadialBarChart
+        data={chart}
+        startAngle={180}
+        endAngle={0}
+        margin={{ top: 20, right: 70, left: 0, bottom: 0 }}
+      >
+        <RadialBar
+          minAngle={10}
+          label={{ fill: '#fff', position: 'left' }}
+          clockWise={true}
+          dataKey="total"
+        />
+        <Legend
+          iconSize={20}
+          width={120}
+          height={140}
+          layout="vertical"
+          verticalAlign="top"
+          align="right"
+        />
+      </RadialBarChart>
+    </ResponsiveContainer>
   );
 };
 

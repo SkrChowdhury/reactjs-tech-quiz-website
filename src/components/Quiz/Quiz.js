@@ -10,11 +10,6 @@ const Quiz = ({ subject }) => {
             {subject.name}
           </p>
           <div className="flex items-center justify-center ">
-            {/* <p className="mr-2 text-5xl font-semibold text-white lg:text-6xl">
-                      $39
-                    </p>
-                    <p className="text-lg text-gray-500">/ month</p> */}
-
             <img className="w-full" src={subject.logo} alt="" />
           </div>
         </div>

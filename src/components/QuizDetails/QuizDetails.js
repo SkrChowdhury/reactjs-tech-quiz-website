@@ -4,8 +4,8 @@ import SingleQuiz from '../SingleQuiz/SingleQuiz';
 
 const QuizDetails = () => {
   const quizDetails = useLoaderData();
+
   const quizes = quizDetails.data.questions;
-  console.log(quizDetails);
 
   return (
     <div>
@@ -13,7 +13,7 @@ const QuizDetails = () => {
         Quiz of {quizDetails.data.name}
       </h2>
       {quizes.map((quiz) => (
-        <SingleQuiz key={quizes.id} quiz={quiz}></SingleQuiz>
+        <SingleQuiz key={quiz.id} quiz={quiz}></SingleQuiz>
       ))}
     </div>
   );
