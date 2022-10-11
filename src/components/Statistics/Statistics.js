@@ -8,13 +8,11 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-const barColors = ['#1f77b4', '#1f7754', '#ff7f0e', '#2ca02c'];
-
 const Statistics = () => {
   const chartinfo = useLoaderData();
   const chart = chartinfo.data;
   return (
-    <div className="mx-auto">
+    <div>
       <ResponsiveContainer height={600}>
         <RadialBarChart
           data={chart}
@@ -24,7 +22,7 @@ const Statistics = () => {
         >
           <RadialBar
             minAngle={10}
-            label={{ fill: '#fff', position: 'center' }}
+            label={{ fill: '#fff', position: 'left' }}
             clockWise={true}
             dataKey="total"
           />
